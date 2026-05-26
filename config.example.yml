@@ -23,7 +23,7 @@ prediction:
     - 0.1
     - 10.0
     - 1000.0
-  n_permutations: 100
+  n_permutations: 10000
 selection_index:
   weights:
     healthy_pod_logit_intercept: 1.0
