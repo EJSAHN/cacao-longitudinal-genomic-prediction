@@ -1,0 +1,16 @@
+name: cacao-resilience
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - openpyxl
+  - xlsxwriter
+  - xlrd>=2.0.1
+  - pyyaml
+  - joblib

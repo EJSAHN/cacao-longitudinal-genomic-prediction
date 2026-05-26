@@ -1,0 +1,40 @@
+seed: 20250308
+reference: both
+phenotypes:
+  pseudo_count: 0.5
+  time_order:
+    2016-II: 0
+    2017-I: 1
+    2017-II: 2
+    2018-I: 3
+genotypes:
+  maf_min: 0.05
+  call_rate_min: 0.95
+  n_pcs: 10
+  n_blocks: 5
+prediction:
+  models:
+    - pc_ridge
+    - gblup
+  n_splits_random: 5
+  n_repeats_random: 20
+  n_splits_inner: 4
+  alpha_grid:
+    - 0.1
+    - 10.0
+    - 1000.0
+  n_permutations: 100
+selection_index:
+  weights:
+    healthy_pod_logit_intercept: 1.0
+    healthy_pod_logit_slope: 0.5
+    healthy_pod_logit_residual_sd: -0.25
+    fpr_audpc_log_intercept: -1.0
+    fpr_audpc_log_slope: -0.5
+    fpr_audpc_log_residual_sd: -0.25
+    flower_wbd_audpc_log_intercept: -1.0
+    flower_wbd_audpc_log_slope: -0.5
+    flower_wbd_audpc_log_residual_sd: -0.25
+    branch_wbd_audpc_log_intercept: -1.0
+    branch_wbd_audpc_log_slope: -0.5
+    branch_wbd_audpc_log_residual_sd: -0.25
